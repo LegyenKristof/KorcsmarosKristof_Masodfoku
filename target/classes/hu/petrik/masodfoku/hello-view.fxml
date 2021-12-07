@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.petrik.masodfoku.HelloController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="400.0" />
   </columnConstraints>
@@ -15,7 +15,7 @@
     <RowConstraints maxHeight="120" minHeight="120" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField maxHeight="60" maxWidth="60" minHeight="60" minWidth="60" />
+      <TextField fx:id="a" maxHeight="60" maxWidth="60" minHeight="60" minWidth="60" />
       <Label text="x^2+">
          <font>
             <Font size="30.0" />
@@ -24,7 +24,7 @@
             <Insets left="60.0" />
          </GridPane.margin>
       </Label>
-      <TextField layoutX="10.0" layoutY="10.0" maxHeight="60" maxWidth="60" minHeight="60" minWidth="60">
+      <TextField fx:id="b" layoutX="10.0" layoutY="10.0" maxHeight="60" maxWidth="60" minHeight="60" minWidth="60">
          <GridPane.margin>
             <Insets left="131.0" />
          </GridPane.margin>
@@ -37,7 +37,7 @@
             <Insets left="191.0" />
          </GridPane.margin>
       </Label>
-      <TextField layoutX="141.0" layoutY="10.0" maxHeight="60" maxWidth="60" minHeight="60" minWidth="60">
+      <TextField fx:id="c" layoutX="141.0" layoutY="10.0" maxHeight="60" maxWidth="60" minHeight="60" minWidth="60">
          <GridPane.margin>
             <Insets left="226.0" />
          </GridPane.margin>
@@ -50,9 +50,14 @@
             <Insets left="286.0" />
          </GridPane.margin>
       </Label>
-      <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1">
+      <Button mnemonicParsing="false" onMouseClicked="#szamol" text="Számol" GridPane.rowIndex="1">
          <font>
             <Font size="30.0" />
          </font></Button>
+      <Label fx:id="eredmeny" layoutX="296.0" layoutY="18.0" GridPane.rowIndex="2">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </GridPane>

@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="masodfoku" target="17" />
+      <module name="masodfoku" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>
