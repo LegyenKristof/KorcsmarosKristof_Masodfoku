@@ -35,6 +35,22 @@ public class HelloController {
     }
 
     private void kiszamol(){
-
+        double dA = Double.parseDouble(a.getText());
+        double dB = Double.parseDouble(b.getText());
+        double dC = Double.parseDouble(c.getText());
+        double diszkriminans = (dB * dB) - (4 * dA * dC);
+        if(diszkriminans < 0){
+            eredmeny.setText("Nem oldható meg a\nvalós számok halmazán");
+        }
+        else {
+            double x1 = ((-1 * dB) + Math.sqrt(diszkriminans)) / (2 * dA);
+            double x2 = ((-1 * dB) - Math.sqrt(diszkriminans)) / (2 * dA);
+            if(x1 == x2){
+                eredmeny.setText(String.format("x1 = x2 = %.3f", Math.round(x1*100)/100));
+            }
+            else{
+                eredmeny.setText(String.format("x1 = %.3f\nx2 = %.3f", Math.round(x1*100)/100, Math.round(x2*100)/100));
+            }
+        }
     }
 }
