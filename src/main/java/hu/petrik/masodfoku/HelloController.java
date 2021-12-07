@@ -46,10 +46,10 @@ public class HelloController {
             double x1 = ((-1 * dB) + Math.sqrt(diszkriminans)) / (2 * dA);
             double x2 = ((-1 * dB) - Math.sqrt(diszkriminans)) / (2 * dA);
             if(x1 == x2){
-                eredmeny.setText(String.format("x1 = x2 = %.3f", Math.round(x1*100)/100));
+                eredmeny.setText(String.format("x1 = x2 = %.3f", Math.round(x1*1000)/1000));
             }
             else{
-                eredmeny.setText(String.format("x1 = %.3f\nx2 = %.3f", Math.round(x1*100)/100, Math.round(x2*100)/100));
+                eredmeny.setText(String.format("x1 = %.3f\nx2 = %.3f", Math.round(x1*1000)/1000, Math.round(x2*1000)/1000));
             }
         }
     }
